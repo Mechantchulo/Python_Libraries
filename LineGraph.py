@@ -8,10 +8,8 @@ x = [0, 1, 2, 3, 4, 5]
 # We replace 'k' with 'e3' which means *1000, and convert to float.
 y1 = [float(val.replace('k', 'e3')) for val in ['1000', '13k', '26k', '42k', '60k', '81k']]
 y2 = [float(val.replace('k', 'e3')) for val in ['1000', '13k', '27k', '43k', '63k', '85k']]
+#y3 = [float(val.replace('k', 'e3')) for val in ['1200', '15k', '30k', '45k', '65k', '90k']]
 
-# Alternatively, you can define the numbers directly:
-# y1 = [1000, 13000, 26000, 42000, 60000, 81000]
-# y2 = [1000, 13000, 27000, 43000, 63000, 85000]
 
 # Create a new figure, like preparing a fresh canvas
 plt.figure(figsize=(10, 6)) # width, height in inches
@@ -20,6 +18,8 @@ plt.figure(figsize=(10, 6)) # width, height in inches
 plt.plot(x, y1, label='Production Line A', linestyle='-', marker='o')
 # Plot the second data series with a dash-dot line
 plt.plot(x, y2, label='Production Line B', linestyle='-.', marker='s')
+# Plot the third data series with a dashed line
+#plt.plot(x, y3, label='Production Line C', linestyle='-', marker='b')
 
 # Add titles and labels to give context to our story
 plt.xlabel("Season", fontsize=12)
